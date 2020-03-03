@@ -1,0 +1,5 @@
+ssh-keygen -t rsa -C "comment"  // gen rsa key
+eval $(ssh-agent -s)            // start ssh agent 
+ssh-add <private key file>
+
+
