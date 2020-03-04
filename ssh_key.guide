@@ -1,5 +1,5 @@
 ssh-keygen -t rsa -C "comment"  // gen rsa key
-eval $(ssh-agent -s)            // start ssh agent 
+//eval $(ssh-agent -s)            // start ssh agent 
+eval (ssh-agent -c)            // start ssh agent 
 ssh-add <private key file>
-
-
+ssh -T git@github.com       // check the connection of ssh using rsa key
