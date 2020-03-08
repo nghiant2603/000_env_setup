@@ -18,6 +18,7 @@ alias lg='ls -lt | egrep '
 alias c='cd ../'
 alias vd='vimdiff'
 
+alias _g='git '
 alias _stt='git status'
 alias _add='git add'
-alias _cm='git commit'
+alias _cm ='git commit'
