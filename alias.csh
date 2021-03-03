@@ -6,8 +6,6 @@ set -xg GOPATH $HOME/gocode
 # Python developers otherwise
 set -xg PYTHONDONTWRITEBYTECODE 1
 
-set cfg_alias $HOME/001_envSetup/alias.csh
-
 alias cl='clear;ls'
 alias c='cd ../'
 alias ll='ls -lt'
