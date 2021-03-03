@@ -1,0 +1,47 @@
+====================================================
+Create Partition
+Mount Disk
+====================================================
+sudo fdisk -l
+sudo parted <new disk>
+   parted >>> mklabel gpt
+   parted >>> mkpart primary ext4 0% 100%
+   parted >>> quit
+sudo mkfs.ext4 <new partition>
+mkdir <mount point>
+sudo mount t -auto <new partition> <mount point>
+
+====================================================
+Install python3.8 - pip - virtualenv
+====================================================
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.8
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3.8 get-pip.py
+
+pip3.8 install virtualenv
+
+====================================================
+Install virtualenv for fish shell
+====================================================
+python3.8 -m pip  install virtualfish
+vf install
+vf new myvirtualenv
+
+====================================================
+SSH Key Gen
+====================================================
+
+ssh-keygen -t rsa -C "comment"  // gen rsa key                                                                                                             
+//eval $(ssh-agent -s)            // start ssh agent 
+ssh-add <private key file>
+//ssh -T git@github.com       // check the connection of ssh using rsa key
+
+====================================================
+Linux Env config
+====================================================
+
+source ./conf_linux.csh
