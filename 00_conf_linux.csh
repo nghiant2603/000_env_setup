@@ -50,3 +50,4 @@
 
 #echo "Config Alias " >> run.log
 #ln -sf `pwd`/alias.csh $HOME/.alias.csh
+

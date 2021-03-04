@@ -41,3 +41,18 @@ Linux Env config
 ====================================================
 
 source ./conf_linux.csh
+
+====================================================
+Linux Env config
+====================================================
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+sudo apt install ./chrome-remote-desktop_current_amd64.deb
+sudo apt-get install xubuntu-desktop
+sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
+sudo apt install --assume-yes xscreensaver
+sudo systemctl disable lightdm.service
+sudo usermod -a -G chrome-remote-desktop $USER
+--> At local machine, go to http://remotedesktop.google.com/headless config google account
+-> get link and run at VM machine to config $DISPLAY 
+EX : 
+   env DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AY0e-g4rpcUzVNjfW7JkYg70tFIanuoHSY1aNKq9F2-JweJBfxI9zu0kwbWJecFmQrMXNg" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name='hn-machine2'
