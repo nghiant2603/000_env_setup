@@ -34,10 +34,16 @@ function fish_prompt
     set arrow ''
   end
 
+  if [ "$VIRTUAL_ENV" != "" ]
+    set venv $green(basename "$VIRTUAL_ENV") $normal
+  else
+    set venv "noENV"
+  end
+
   set -l time $cyan(date '+%I:%M')$normal
   set -l cwd $cyan(basename (prompt_pwd))$normal
 
-  set git_info "$blue NoGIT"
+  set git_info "$blue noGIT"
   if [ (_git_branch_name) ]
     set -l git_branch_name (_git_branch_name)
     set -l git_branch $brightred$git_branch_name$normal
@@ -56,6 +62,6 @@ function fish_prompt
   end
 
   #echo -n -s $failed $arrow $time ' ' $pwd $git_info $normal ' >' \n '>>> '
-  echo -n -s \n $failed $arrow $time ' - ' $git_info ' - ' $cyan (pwd) $normal ' >' \n '>>> '
+  echo -n -s \n '<<' $brightred  'NTN' $normal '>> ' $failed $arrow $time ' -' $git_info ' - ' $cyan (pwd) $normal ' >' \n '>>> '
 
 end
