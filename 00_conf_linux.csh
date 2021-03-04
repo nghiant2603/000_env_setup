@@ -11,6 +11,7 @@ ln -sf `pwd`/vimrc.local $HOME/.vimrc
 
 echo "Install python & pip"
 sudo apt update
+sudo apt install libgl1-mesa-glx
 sudo apt install python-pip
 sudo apt install python2-pip
 sudo apt install software-properties-common                                                                                                                
