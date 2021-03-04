@@ -26,4 +26,5 @@ alias g_com='git commit'
 #alias g_push {git push origin master}
 #alias g_list {git remote -v}
 
+alias venv='python3.8 -m virtualenv -p python3.8 '
 
