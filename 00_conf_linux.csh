@@ -51,3 +51,13 @@
 #echo "Config Alias " >> run.log
 #ln -sf `pwd`/alias.csh $HOME/.alias.csh
 
+#echo "Chrome Remote Desktop" >> run.log
+#wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+#sudo apt install ./chrome-remote-desktop_current_amd64.deb
+#sudo apt-get install xubuntu-desktop
+#sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
+#sudo apt install --assume-yes xscreensaver
+#sudo systemctl disable lightdm.service
+#sudo usermod -a -G chrome-remote-desktop $USER
+#echo ">>>>....At local machine, go to http://remotedesktop.google.com/headless config remote account"
+#echo ">>>>....get link and run at VM machine to config DISPLAY"
