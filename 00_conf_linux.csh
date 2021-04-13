@@ -1,5 +1,7 @@
 #! /bin/csh
 
+sudo apt update
+sudo apt upgrade
 #echo "Create password for current user" > run.log
 #sudo passwd $USER
 #
