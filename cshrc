@@ -15,13 +15,28 @@ set    cyan="%{\033[38;5;45m%}"
 set   white="%{\033[38;5;255m%}"
 set     end="%{\033[0m%}" # This is needed at the end...
 
+if ( $?tcsh ) then
+  bindkey "^[[3~" delete-char
+endif
+
+bindkey "^R" i-search-back
+#bindkey '\t' history-search-backward
+
+#set filec
+#set autolist
+#set autolist ambiguous
+#set autoexpand
+
+set echo_style = both
+set histdup = erase
+set savehist = (1024 merge)
+
 if ($?prompt) then
   if ($?tcsh) then
     #set promptchars='$#'
     #set prompt='[%n@%m %c]>>>${end}%# '
     set prompt="${red}%T ${yellow}%d-%D%w%Y ${green}%n@%m ${cyan}%c\n${white}>>>${end} "
     # make completion work better by default
-    set autolist
   else
     set prompt=\[$user@`hostname -s`\]\$\ 
     #set prompt="${red}%T ${yellow}%d-%D%w%Y ${green}%n@%m ${cyan}%c\n${white}>>>${end} "
@@ -63,17 +78,6 @@ if (! $?loginsh) then
     unset i nonomatch
   endif
 endif
-
-if ( $?tcsh ) then
-  bindkey "^[[3~" delete-char
-endif
-
-bindkey "^R" i-search-back
-bindkey '\t' history-search-backward
-
-set echo_style = both
-set histdup = erase
-set savehist = (1024 merge)
 
 setenv LS_COLORS "di=96:fi=0:ln=93:pi=5:so=5:bd=5:cd=5:or=101:mi=101:ex=92:*.v=35:*.vg=35:*.gv=35:*.tcl=35:*.scm=35:*.mgm=35:*.mky=35:*.pt=35"
 setenv LANG C
