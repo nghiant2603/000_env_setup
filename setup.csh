@@ -1,32 +1,33 @@
 #! /bin/csh
 
-##echo "Update & update grade linux"
-##sudo apt update
-##sudo apt upgrade
-##
-##echo "Create password for current user"
-##sudo passwd $USER
-##
+echo "Update & update grade linux"
+sudo apt update
+sudo apt upgrade
+
+#echo "Create password for current user"
+#sudo passwd $USER
+
 ###echo "Set timezone"
 ###sudo timedatectl set-timezone Asia/Ho_Chi_Minh
-##
-##echo "Install & set default Cshell"
-##sudo apt-get install zsh
-##chsh -s `which zsh`
-##
-##echo "Config Git"
-###Note : gen and add pub ssh key to github using ssh-keygen
-##git config --global user.email "$USER@gmail.com"
-##git config --global user.name "$USER"
-##
-##echo "Config Alias "
-##ln -sf `pwd`/alias.csh $HOME/.alias.csh
-##
-##echo "Config cshrc "
-##ln -sf `pwd`/zshrc $HOME/.zshrc
-##
-##echo "Config VIM"
-##ln -sf `pwd`/vimrc.local $HOME/.vimrc
+
+echo "Install & set default Cshell"
+sudo apt-get install zsh
+chsh -s `which zsh`
+
+echo "Config Git"
+#Note : gen and add pub ssh key to github using ssh-keygen
+git config --global user.email "$USER@gmail.com"
+git config --global user.name "$USER"
+
+echo "Config Alias "
+ln -sf `pwd`/alias.csh $HOME/.alias.csh
+
+echo "Config cshrc "
+ln -sf `pwd`/zshrc $HOME/.zshrc
+
+echo "Config VIM"
+sudo apt-get install vim
+ln -sf `pwd`/vimrc.local $HOME/.vimrc
 
 echo "Install python3.8 - pip - virtualenv"
 sudo apt update
@@ -35,6 +36,7 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.8
 #sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+sudo apt  install curl  # version 7.68.0-1ubuntu2.5
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo apt-get install python3.8-distutils
 python3.8 get-pip.py
