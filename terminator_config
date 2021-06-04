@@ -1,10 +1,14 @@
 [global_config]
+  window_state = maximise
+  title_use_system_font = False
 [keybindings]
 [profiles]
   [[default]]
+    icon_bell = False
     cursor_color = "#aaaaaa"
-    font = Monospace 14
+    font = Monospace 16
     use_system_font = False
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[window0]]]
@@ -13,4 +17,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
+      profile = default
 [plugins]

@@ -38,6 +38,8 @@ python3.8 -m virtualenv <env name>
 ====================================================
 
 ssh-keygen -t rsa -C "comment"  // gen rsa key                                                                                                             
+
+//For window power shell
 //eval $(ssh-agent -s)            // start ssh agent 
 ssh-add <private key file>
 //ssh -T git@github.com       // check the connection of ssh using rsa key
