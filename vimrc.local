@@ -1,104 +1,81 @@
-" Don't try to be vi compatible
-set nocompatible
-
-" Helps force plugins to load correctly when it is turned back on below
-filetype off
-
-" TODO: Load plugins here (pathogen or vundle)
-
-" Turn on syntax highlighting
-syntax on
-
-" For plugins to load correctly
-filetype plugin indent on
-
-" TODO: Pick a leader key
-" let mapleader = ","
-
-" Security
-set modelines=0
-
-" Show line numbers
-set number
-
-" set line, col 
-set cuc
-set cul
-
-" Show file stats
-set ruler
-
-" Blink cursor on error instead of beeping (grr)
-set visualbell
-
-" Encoding
-set encoding=utf-8
-
-" Whitespace
-set wrap
-set textwidth=79
-set formatoptions=tcqrn1
+" size of a hard tabstop
 set tabstop=2
+ 
+" size of an "indent"
 set shiftwidth=2
+ 
+" a combination of spaces and tabs are used to simulate tab stops at a width
+" other than the (hard)tabstop
 set softtabstop=2
+ 
+" make "tab" insert indents instead of tabs at the beginning of a line
+set smarttab
+ 
+" always uses spaces instead of tab characters
 set expandtab
-set noshiftround
-
-" Cursor motion
-set scrolloff=3
-set backspace=indent,eol,start
-set matchpairs+=<:> " use % to jump between pairs
-runtime! macros/matchit.vim
-
-" Move up/down editor lines
-nnoremap j gj
-nnoremap k gk
-
-" Allow hidden buffers
-set hidden
-
-" Rendering
-set ttyfast
-
-" Status bar
-set laststatus=2
-
-" Last line
-set showmode
-set showcmd
-
-" Searching
-nnoremap / /\v
-vnoremap / /\v
+ 
 set hlsearch
 set incsearch
-set ignorecase
+"set ignorecase
 set smartcase
 set showmatch
-map <leader><space> :let @/=''<cr> " clear search
-
-" Remap help key.
-inoremap <F1> <ESC>:set invfullscreen<CR>a
-nnoremap <F1> :set invfullscreen<CR>
-vnoremap <F1> :set invfullscreen<CR>
-
-" Textmate holdouts
-
-" Formatting
-map <leader>q gqip
-
-" Visualize tabs and newlines
-set listchars=tab:▸\ ,eol:¬
-" Uncomment this to enable by default:
-" set list " To enable by default
-" Or use your leader key + l to toggle on/off
-map <leader>l :set list!<CR> " Toggle tabs and EOL
-
-" Color scheme (terminal)
+ 
+" enable filetype plugins
+filetype plugin on
+filetype indent on
+ 
+" set auto read when the file is change outside
+set autoread
+ 
+" set always show current position
+set ruler
+ 
+" set auto indent
+set ai
+" set smart indent
+set si
+ 
+" set wrap line
+set wrap
+ 
+" set height of cmd bar
+set cmdheight=2
+ 
+" set no swap file
+set noswapfile
+ 
+" set gofile
+set isfname+={,}
+ 
+" set no bell
+set noeb vb t_vb=
+" Blink cursor on error instead of beeping (grr)
+" set visualbell
+ 
+" Encoding
+set encoding=utf-8
+ 
+" set line number, line, col
+set nu
+set cuc
+set cul
+ 
+" set color
+" if &diff
+"   colorscheme torte 
+" else
+"   colorscheme darkblue
+" endif
 set t_Co=256
-set background=dark
+set background=dark              
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-" put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-" in ~/.vim/colors/ and uncomment:
-" colorscheme solarized
+ 
+" set fold
+augroup vimrc
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+augroup END
+" set intial window size
+" set lines=40 columns=100
+set cursorline          
