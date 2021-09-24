@@ -4,9 +4,11 @@
 [keybindings]
 [profiles]
   [[default]]
+    allow_bold = False
     icon_bell = False
+    background_darkness = 0.9
     cursor_color = "#aaaaaa"
-    font = Monospace 16
+    font = Nimbus Mono PS 17
     use_system_font = False
     copy_on_selection = True
 [layouts]
