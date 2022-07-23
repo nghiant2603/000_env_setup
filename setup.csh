@@ -18,6 +18,7 @@ echo "Config Git"
 #Note : gen and add pub ssh key to github using ssh-keygen
 git config --global user.email "$USER@gmail.com"
 git config --global user.name "$USER"
+git config --global core.editor "<open editor command>"
 
 echo "Config Alias "
 ln -sf `pwd`/alias.csh $HOME/.alias.csh
