@@ -10,7 +10,7 @@ sudo passwd $USER
 #echo "Set timezone"
 #sudo timedatectl set-timezone Asia/Ho_Chi_Minh
 
-echo "Install & set default Cshell"
+echo "Install & set default Shell"
 sudo apt-get install zsh
 chsh -s `which zsh`
 
