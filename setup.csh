@@ -19,6 +19,12 @@ echo "Config Git"
 git config --global user.email "$USER@gmail.com"
 git config --global user.name "$USER"
 git config --global core.editor "<open editor command>"
+git config --global diff.tool <diff tool, ex: p4merge>
+git config --global difftool.<diff tool>.path "<path to diff tool>"
+git config --global difftool.prompt false
+git config --global merge.tool <merge tool, ex: p4merge>
+git config --global mergetool.<merge tool>.path "<path to merge tool>"
+git config --global mergetool.prompt false
 
 echo "Config Alias "
 ln -sf `pwd`/alias.csh $HOME/.alias.csh
