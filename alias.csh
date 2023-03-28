@@ -28,19 +28,9 @@ alias g_com="git commit"
 #alias g_push {git push origin master}
 alias g_list="git remote -v"
 
-alias venv="python3 -m virtualenv -p python3 "
+alias python="python3"
+alias pip="python3 -m pip"
+alias venv="python3 -m virtualenv"
 
-alias we="explorer.exe ."
-
-export wuser='/mnt/c/Users/HP'
-export wdata='/mnt/c/Users/HP/Documents/000_DATA'
-export wdoc='/mnt/c/Users/HP/Documents/000_DATA/100_TECH/000_DOC'
-export wcode='/mnt/c/Users/HP/Documents/000_DATA/100_TECH/100_CODE'
-export wtrain='/mnt/c/Users/HP/Documents/000_DATA/100_TECH/100_CODE/100_TRAIN'
-export wprj='/mnt/c/Users/HP/Documents/000_DATA/100_TECH/100_CODE/000_PRODUCT'
-
-export luser="$HOME"
-export ldata="$HOME/000_DATA"
-
-export SCREENDIR="$HOME/.screen"
-export cfg_alias="$HOME/000_DATA/000_env_setup/alias.csh"
+export data=/Users/$USER/000_DATA
+export cfg_alias=/Users/$USER/000_DATA/000_linux_setup/alias.csh
