@@ -33,6 +33,6 @@ alias pip="python3 -m pip"
 alias venv="python3 -m virtualenv"
 
 export data=/Users/$USER/000_DATA
-export cfg_alias=/Users/$USER/000_DATA/000_linux_setup/alias.csh
+export cfg_alias=/Users/$USER/.alias.csh
 
 echo "ALIAS is reloaded..."
