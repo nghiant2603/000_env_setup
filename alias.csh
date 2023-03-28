@@ -6,7 +6,7 @@
 # Python developers otherwise
 #set -xg PYTHONDONTWRITEBYTECODE 1
 
-echo "ALIAS is reloaded..."
+echo "ALIAS is reloading..."
 
 set filec
 set autolist
@@ -34,3 +34,5 @@ alias venv="python3 -m virtualenv"
 
 export data=/Users/$USER/000_DATA
 export cfg_alias=/Users/$USER/000_DATA/000_linux_setup/alias.csh
+
+echo "ALIAS is reloaded..."
