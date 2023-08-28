@@ -14,7 +14,7 @@ set autolist
 alias ls="ls --color"
 alias cl="clear;ls"
 alias c="cd ../"
-alias ll="ls -lt"
+alias ll="ls -l"
 alias lg="ls -lt | egrep " 
 alias c="cd ../"
 alias vd="vimdiff"
