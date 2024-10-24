@@ -13,6 +13,8 @@ function git_branch_name()
 }
 
 # Enable substitution in the prompt.
+# Refer:
+# https://gist.github.com/dfasolin/97ea83c6c27b949d70b0b1252e533a1e
 setopt prompt_subst
 
 PROMPT="%F{red}%T %F{yellow}%D %F{green}%n@%m %F{cyan}%0d %F{white}>"$'\n'"%F{blue}$(git_branch_name)%F{white}>>> %F{reset}"
